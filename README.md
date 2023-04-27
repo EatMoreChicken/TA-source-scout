@@ -8,7 +8,7 @@ Source Scout is a simple Splunk app that helps you monitor your data sources.
 - *Optional* Splunk App for Lookup File Editing (https://splunkbase.splunk.com/app/1724)
 
 ## 🚀 Installation
-1. Clone or download the Source Scout app.
+1. Clone or download the Source Scout app `.tar.gz` file.
 2. Install the app via Splunk UI or copy it into the `$SPLUNK_HOME/etc/apps` directory.
 3. Restart Splunk if necessary.
 
