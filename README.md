@@ -18,7 +18,8 @@ Source Scout is a simple Splunk app that helps you monitor your data sources.
 
 ## ⚒ Usage
 1. Run a search to determine the sources you would like to monitor. Add these sources and your preferred acceptable tolerance in seconds to the `source-scout-data-sources` KV-store lookup using the Splunk App for Lookup File Editing or other methods. The source should be in the `<index>|<sourcetype>` format. For example, the `windows` index and `xmlwineventlog` sourcetype should be `windows|xmlwineventlog`.
-2. Enable the `Source Scout - Detect Source Outages` alert to start detections. Make sure to test the alerting.
+2. Update the `source-scout-search-constraint` macro to limit the data that's searched for monitoring. The search utilizing this macro is leveraging `tstats`, so you will need to use fields accepted in the `where` clause of `tstats` (Ex. `index, sourcetype, source`).
+3. Enable the `Source Scout - Detect Source Outages` alert to start detections. Make sure to test the alerting.
 
 ## 📃 Drawbacks and Alternatives
 - The alert uses `tstats` to pull information about data sources. Keep in mind that the `_time` used is based on the parsed timestamp. If you have timestamping issues for your log sources, it could through this off.
